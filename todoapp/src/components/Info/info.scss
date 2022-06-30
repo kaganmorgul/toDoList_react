@@ -1,0 +1,13 @@
+.Info {
+  text-align: center;
+  .completedanddeletestask {
+    display: flex;
+    justify-content: center;
+  }
+  button {
+    padding: 3px;
+    margin: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+}

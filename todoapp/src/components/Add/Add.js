@@ -7,10 +7,10 @@ function Add() {
   const [value, setValue] = useState("");
   const [listItems, setlistItems] = useState([]);
   const [deletedTask, setdeletedTask] = useState([]);
+  const [completedTask, setcompletedTask] = useState([]);
 
   const onChangeInput = (e) => {
     setValue(e.target.value);
-    console.log(e.target.value);
   };
   const addTask = (e) => {
     e.preventDefault();
@@ -43,6 +43,8 @@ function Add() {
         listItems={listItems}
         deletedTask={deletedTask}
         setdeletedTask={setdeletedTask}
+        completedTask={completedTask}
+        setcompletedTask={setcompletedTask}
       />
       <Tasklist
         listItems={listItems}
@@ -50,6 +52,8 @@ function Add() {
         setValue={setValue}
         deletedTask={deletedTask}
         setdeletedTask={setdeletedTask}
+        completedTask={completedTask}
+        setcompletedTask={setcompletedTask}
       />
     </div>
   );

@@ -1,7 +1,13 @@
 import React from "react";
 import "./info.scss";
 
-function Info({ listItems, deletedTask, setdeletedTask }) {
+function Info({
+  listItems,
+  deletedTask,
+  setdeletedTask,
+  completedTask,
+  setcompletedTask,
+}) {
   return (
     <div className="Info">
       <div className="taskcount">
@@ -11,10 +17,14 @@ function Info({ listItems, deletedTask, setdeletedTask }) {
       </div>
       <div className="completedanddeletestask">
         <div className="completedtask">
-          <button type="button">Completed Tasks: 34</button>
+          <button onClick={() => alert(completedTask)} type="button">
+            Completed Tasks: {completedTask.length}
+          </button>
         </div>
         <div className="deletedtask">
-          <button onClick={()=> alert(deletedTask)} type="button">Deleted tasks: {deletedTask.length}</button>
+          <button onClick={() => alert(deletedTask)} type="button">
+            Deleted tasks: {deletedTask.length}
+          </button>
         </div>
       </div>
     </div>

@@ -15,6 +15,10 @@
       padding: 8px;
       text-align: center;
     }
+    .textStyle{
+      color: rgb(208, 208, 208);
+      text-decoration:line-through;
+    }
     .list-item-icons {
       display: flex;
       flex-wrap: nowrap;
@@ -26,6 +30,9 @@
     }
     .list-item-text {
       max-width: 200px;
+    }
+    .completed{
+      color: green;
     }
   }
 }

@@ -1,12 +1,12 @@
 import React from "react";
 import "./info.scss";
 
-function Info() {
+function Info({listItems}) {
   return (
     <div className="Info">
       <div className="taskcount">
         <div className="alltasks">
-          <button type="button">All Tasks: 4</button>
+          <button type="button">All Tasks: {listItems.length}</button>
         </div>
       </div>
       <div className="completedanddeletestask">

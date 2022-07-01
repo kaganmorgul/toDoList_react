@@ -4,7 +4,7 @@ import Info from "../Info/Info";
 import Tasklist from "../Tasklist/Tasklist";
 
 function Add() {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
   const [listItems, setlistItems] = useState([]);
 
   const onChangeInput = (e) => {
@@ -13,7 +13,8 @@ function Add() {
   };
   const addTask = (e) => {
     e.preventDefault();
-    setlistItems([...listItems,value]);
+    setlistItems([...listItems, value]);
+    setValue("");
   };
 
   return (
@@ -37,8 +38,12 @@ function Add() {
           Add Task
         </button>
       </form>
-      <Info />
-      <Tasklist listItems={listItems} setlistItems={setlistItems} />
+      <Info   listItems={listItems}/>
+      <Tasklist
+        listItems={listItems}
+        setlistItems={setlistItems}
+        setValue={setValue}
+      />
     </div>
   );
 }

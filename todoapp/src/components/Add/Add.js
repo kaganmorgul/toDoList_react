@@ -6,6 +6,7 @@ import Tasklist from "../Tasklist/Tasklist";
 function Add() {
   const [value, setValue] = useState("");
   const [listItems, setlistItems] = useState([]);
+  const [deletedTask, setdeletedTask] = useState([]);
 
   const onChangeInput = (e) => {
     setValue(e.target.value);
@@ -38,11 +39,17 @@ function Add() {
           Add Task
         </button>
       </form>
-      <Info   listItems={listItems}/>
+      <Info
+        listItems={listItems}
+        deletedTask={deletedTask}
+        setdeletedTask={setdeletedTask}
+      />
       <Tasklist
         listItems={listItems}
         setlistItems={setlistItems}
         setValue={setValue}
+        deletedTask={deletedTask}
+        setdeletedTask={setdeletedTask}
       />
     </div>
   );

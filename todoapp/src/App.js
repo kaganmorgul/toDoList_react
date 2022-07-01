@@ -1,10 +1,10 @@
-import './sass/app.scss';
-import Add from './components/Add/Add';
+import "./sass/app.scss";
+import Add from "./components/Add/Add";
 
 function App() {
   return (
     <div className="App">
-      <Add/>
+      <Add />
     </div>
   );
 }

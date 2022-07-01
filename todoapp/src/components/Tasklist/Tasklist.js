@@ -1,13 +1,16 @@
 import React from "react";
 import "./tasklist.scss";
 
-function Tasklist({ listItems, setlistItems }) {
+function Tasklist({ listItems, setlistItems, deletedTask, setdeletedTask }) {
   // delete item function
   const deleteTask = (indis) => {
     const newList = listItems.filter((i, index) => index !== indis);
     setlistItems(newList);
   };
-
+  const deletedTaskList = (indis) => {
+    const deletedItemList = listItems.filter((i,index) => index === indis);
+    setdeletedTask([...deletedTask , deletedItemList])
+  };
   return (
     <div className="Tasklist">
       <ul>
@@ -26,7 +29,13 @@ function Tasklist({ listItems, setlistItems }) {
                 <p>{item}</p>
               </div>
               <div>
-                <button type="button" onClick={(e) => deleteTask(index)}>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    deleteTask(index);
+                    deletedTaskList(index);
+                  }}
+                >
                   <i className="fa-solid fa-trash-can"></i>
                 </button>
               </div>

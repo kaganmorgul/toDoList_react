@@ -34,7 +34,6 @@ function Tasklist({
           <li key={index}>
             <div className="list-item">
               <div className="list-item-icons">
-                <i className="fa-solid fa-arrows-rotate"></i>
                 <i
                   className="fa-solid fa-check"
                   onClick={(e) => {

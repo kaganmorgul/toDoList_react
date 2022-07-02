@@ -3,11 +3,38 @@
   .completedanddeletestask {
     display: flex;
     justify-content: center;
+    .completedtask {
+      position: relative;
+      .completedtaskitems {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .deletedtask {
+      position: relative;
+      .deletedtaskitems{
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .tasks {
+      position: absolute;
+      background-color: aqua;
+      width: 80%;
+      background-color: #fff;
+      border-radius: 5px;
+      border: 1px solid grey;
+      max-height: 150px;
+      padding: 5px;
+      overflow-y: scroll;
+      box-shadow: 1px 1px 5px grey;
+    }
   }
   button {
     padding: 3px;
     margin: 5px;
     background-color: #fff;
     border-radius: 5px;
+    width: 90px;
   }
 }
